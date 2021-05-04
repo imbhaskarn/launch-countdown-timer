@@ -1,0 +1,103 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+
+    font-family: 'Red Hat Text', 'sans-serif';
+    background: hsl(235, 16%, 14%) url(/images/bg-stars.svg) no-repeat;
+    background-size: cover;
+}
+
+.header {
+    width: 100%;
+    height: 70vh;
+    padding: 15vh 25% 5vh 25%;
+    border: 3px solid blue;
+    position: relative;
+
+}
+
+.watch {
+    position: absolute;
+    margin: auto;
+    padding: 5px 5px 5px 5px;
+    bottom: 15vh;
+    background-color: transparent;
+
+}
+
+.watch {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    border: 0px;
+    background-color: #343650;
+    margin: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.scooped-left::before {
+    content: "";
+    position: absolute;
+    margin: auto;
+    left: -8px;
+    top: 0px;
+    bottom: 0px;
+    background-color: #1e1f29;
+    /* to see where it is */
+    width: 18px;
+    height: 18px;
+    transform: rotate(45deg);
+    border-radius: 9px;
+    z-index:2;
+}
+
+.scooped-right::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+    right: -8px;
+    width: 18px;
+    height: 18px;
+    transform: rotate(45deg);
+    border-radius: 9px;
+    background-color: #1e1f29;
+    /* to see where it is */
+    z-index: 100;
+}
+
+hr {
+    position: absolute;
+    width: 100%;
+    margin: auto;
+    border: 2px solid #1e1f29;
+    height: 1px;
+    opacity: 0.2;
+    top: 0px;
+    bottom: 0px;
+    color: #1e1f29;
+    z-index: 1;
+}
+
+footer {
+    width: 100%;
+    height: 30vh;
+    background-image: url(/images/pattern-hills.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
