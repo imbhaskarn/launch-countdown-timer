@@ -1,7 +1,14 @@
-setInterval( () =>{
+function formatNum(num) {
+    var nums = ("0" + num).slice(-2);
+    return nums
+}
+getTime = () => {
     var date = new Date()
     let minutes = date.getMinutes()
-    minutes = document.getElementById('minutes').innerHTML
     let seconds = date.getSeconds()
-    seconds = document.getElementById('seconds').innerHTML
-})
+    
+    document.getElementById("minutes").innerHTML = formatNum(minutes) 
+    document.getElementById("seconds").innerHTML = formatNum(seconds)
+}
+
+setInterval(getTime, 1000)
